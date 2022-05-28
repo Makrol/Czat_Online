@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatclient.client.LogInController">
+   <center>
+      <AnchorPane prefHeight="277.0" prefWidth="611.0" style="-fx-background-color: #DEDEDE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="20.0" layoutY="70.0" text="Login" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="112.0" text="Hasło" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login" layoutX="86.0" layoutY="73.0" promptText="Login" />
+            <Button fx:id="loginButton" layoutX="86.0" layoutY="167.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="38.0" prefWidth="88.0" style="-fx-background-color: #0269A4;" text="Zaloguj">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <PasswordField fx:id="passwordLogin" layoutX="86.0" layoutY="117.0" promptText="Password" />
+            <Button fx:id="cancelButton" layoutX="250.0" layoutY="167.0" mnemonicParsing="false" onAction="#cancelLogin" prefHeight="38.0" prefWidth="88.0" style="-fx-background-color: #0269A4;" text="Wyjdź">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="73.0" layoutY="14.0" text="LOGOWANIE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongLogin" layoutX="184.0" layoutY="216.0" prefHeight="47.0" prefWidth="233.0" textFill="RED" />
+            <TextField fx:id="surname" layoutX="377.0" layoutY="73.0" promptText="Nazwisko" />
+            <PasswordField fx:id="passwordRegister" layoutX="378.0" layoutY="129.0" promptText="Password" />
+            <Label layoutX="381.0" layoutY="14.0" text="REJESTRACJA">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="312.0" layoutY="99.0" text="Login" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="312.0" layoutY="129.0" text="Hasło" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="registerButton" layoutX="396.0" layoutY="167.0" mnemonicParsing="false" onAction="#userRegister" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="ZAREJESTRUJ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="name" layoutX="377.0" layoutY="46.0" promptText="Imię" />
+            <Label layoutX="317.0" layoutY="44.0" text="Imię" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="272.0" layoutY="70.0" text="Nazwisko" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginRegister" layoutX="378.0" layoutY="102.0" promptText="Login" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

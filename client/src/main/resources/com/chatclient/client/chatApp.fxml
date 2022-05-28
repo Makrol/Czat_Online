@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatclient.client.ChatAppController">
+   <bottom>
+      <TabPane prefHeight="451.0" prefWidth="924.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Czat">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="396.0" prefWidth="952.0">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="396.0" prefWidth="904.0" style="-fx-background-color: #d4d4d4;">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="771.2000122070312" minWidth="10.0" prefWidth="120.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="697.6000732421875" minWidth="10.0" prefWidth="697.6000732421875" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.4000244140625" minWidth="0.0" prefWidth="120.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="400.0" minHeight="200.0" prefHeight="200.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="65.0" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="65.0" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label layoutX="328.0" layoutY="14.0" text="Czat">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ScrollPane fitToWidth="true" prefHeight="226.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <GridPane alignment="CENTER" prefHeight="396.0" prefWidth="904.0" style="-fx-background-color: #d4d4d4;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="771.2000122070312" minWidth="10.0" prefWidth="120.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="697.6000732421875" minWidth="10.0" prefWidth="697.6000732421875" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.4000244140625" minWidth="0.0" prefWidth="120.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="200.0" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Text fx:id="chat" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="609.0" GridPane.columnIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="166.0" prefWidth="662.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField fx:id="messageFieldToSend" layoutX="14.0" layoutY="23.0" prefHeight="26.0" prefWidth="660.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="sendButton" mnemonicParsing="false" onAction="#sendCreditQuery" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Wyslij" textFill="#e4e4e4" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Ustawienia">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="405.6" prefWidth="904.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane alignment="CENTER" prefHeight="396.0" prefWidth="904.0" style="-fx-background-color: #d4d4d4;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="771.2000122070312" minWidth="10.0" prefWidth="120.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="697.6000732421875" minWidth="10.0" prefWidth="697.6000732421875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.4000244140625" minWidth="0.0" prefWidth="120.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="65.0" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="65.0" minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <AnchorPane prefHeight="69.0" prefWidth="662.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <TextField fx:id="newLoginField" layoutX="14.0" layoutY="60.0" prefHeight="26.0" prefWidth="205.0" />
+                                          <Label layoutX="16.0" layoutY="42.0" text="Nowy login:" />
+                                          <Label layoutX="16.0" layoutY="4.0" text="Zmień login:">
+                                             <font>
+                                                <Font size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="changeLoginButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <Label layoutX="250.0" layoutY="14.0" text="Ustawienia">
+                                             <font>
+                                                <Font name="System Bold" size="26.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <center>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <AnchorPane prefHeight="65.0" prefWidth="694.0">
+                                                   <children>
+                                                      <Text fx:id="errorField" fill="RED" layoutX="15.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="657.0">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </HBox>
+                                       </center>
+                                    </BorderPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="687.0" style="-fx-background-color: #E8E9EB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TextField fx:id="newPasswordField" layoutX="14.0" layoutY="60.0" prefHeight="26.0" prefWidth="205.0" />
+                                                <Label layoutX="16.0" layoutY="42.0" text="Nowe hasło:" />
+                                                <Label layoutX="16.0" layoutY="4.0" text="Zmień hasło:">
+                                                   <font>
+                                                      <Font size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="changePasswordButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="69.0" prefWidth="662.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <Button fx:id="changeNameButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="newNameField" layoutX="14.0" layoutY="60.0" prefHeight="26.0" prefWidth="205.0" />
+                                          <Label layoutX="16.0" layoutY="42.0" text="Nowe imie:" />
+                                          <Label layoutX="16.0" layoutY="4.0" text="Zmień imie:">
+                                             <font>
+                                                <Font size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="69.0" prefWidth="662.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <TextField fx:id="newSurnameField" layoutX="14.0" layoutY="60.0" prefHeight="26.0" prefWidth="205.0" />
+                                          <Label layoutX="16.0" layoutY="42.0" text="Nowe nazwisko:" />
+                                          <Label layoutX="16.0" layoutY="4.0" text="Zmień nazwisko:">
+                                             <font>
+                                                <Font size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="changeSurnameButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </bottom>
+   <top>
+      <BorderPane prefHeight="133.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <AnchorPane prefHeight="134.0" prefWidth="260.0" style="-fx-background-color: #e4e4e4;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Label layoutX="20.0" layoutY="47.0" text="Imie:" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="73.0" prefHeight="20.0" prefWidth="105.0" text="Nazwisko:" AnchorPane.leftAnchor="18.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="login" layoutX="73.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="64.0" />
+                  <Text fx:id="name" layoutX="76.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button fx:id="logoutButton" layoutX="179.0" layoutY="104.0" mnemonicParsing="false" onAction="#logout" prefHeight="47.0" prefWidth="71.0" style="-fx-background-color: #0269A4;" text="Wyloguj" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="surname" layoutX="105.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="93.0" />
+                  <Label layoutX="29.0" layoutY="21.0" prefHeight="20.0" prefWidth="38.0" text="Login:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="138.0" prefWidth="674.0" style="-fx-background-color: #0269A4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="375.0" layoutY="14.0" prefHeight="45.0" prefWidth="285.0" text="CZAT INTERNETOWY" textFill="#e4e4e4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>
