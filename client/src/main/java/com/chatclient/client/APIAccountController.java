@@ -1,5 +1,6 @@
 package com.chatclient.client;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import retrofit2.Call;
@@ -9,12 +10,12 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class APIAccountController implements Callback<List<Account>> {
     APIAccountResource resource;
-    static final String BASE_URL = "http://localhost:8080/";
+    ObjectMapper mapper = new ObjectMapper();
+    static final String BASE_URL = "http://localhost:8081/";
     private Retrofit retrofit;
     public void start() {
         Gson gson = new GsonBuilder()
@@ -32,19 +33,75 @@ public class APIAccountController implements Callback<List<Account>> {
         // call.enqueue(this);
         resource = retrofit.create(APIAccountResource.class);
     }
-    Account login(String login,String password) throws IOException {
+    Account login(String login,String password) throws Throwable {
 
-        Call<List<Account>> tmp = resource.login(login, password);
-        Response<List<Account>> response = tmp.execute();
+        Call<Account> tmp = resource.login(login, password);
+        Response<Account> response = tmp.execute();
          if (response.isSuccessful()) {
-             ArrayList<Account>tmp2= (ArrayList<Account>) response.body();
-             return tmp2.get(0);
+            return response.body();
+
           }
 
         return null;
     }
-    Account register(String name,String surname,String login, String password)throws  IOException{
+    /*Account register(String name,String surname,String login, String password)throws  IOException{
         Call<Account> tmp = resource.register(name, surname, login, password);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }*/
+    Account register(String name,String surname,String login, String password)throws IOException {
+        Call<Account> tmp = resource.register(name, surname, login, password);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }
+    Account connect(String login)throws IOException{
+        Call<Account> tmp = resource.connect(login);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }
+    Account updateLogin(Long id,String data) throws IOException{
+        Call<Account> tmp =resource.updateLogin(id,data);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }
+    Account updateName(Long id,String data) throws IOException{
+        Call<Account> tmp =resource.updateName(id,data);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }
+    Account updatePassword(Long id,String data) throws IOException{
+        Call<Account> tmp =resource.updatePassword(id,data);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }
+    Account updateSurname(Long id,String data) throws IOException{
+        Call<Account> tmp =resource.updateSurname(id,data);
+        Response<Account> response = tmp.execute();
+        if(response.isSuccessful()){
+            return  response.body();
+        }
+        return null;
+    }
+    Account deleteAccount(Long id) throws IOException{
+        Call<Account> tmp =resource.deleteAccount(id);
         Response<Account> response = tmp.execute();
         if(response.isSuccessful()){
             return  response.body();
@@ -60,7 +117,6 @@ public class APIAccountController implements Callback<List<Account>> {
             System.out.println(response.errorBody());
         }
     }
-
     @Override
     public void onFailure(Call<List<Account>> call, Throwable t) {
         t.printStackTrace();

@@ -77,27 +77,6 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <TextField fx:id="withWhoChatField" prefHeight="26.0" prefWidth="660.0" translateY="-80.0" GridPane.rowIndex="1" />
-                              <Label prefHeight="20.0" prefWidth="105.0" text="Czatuj z:" translateY="-100.0" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="connectButton" mnemonicParsing="false" onAction="#connect" prefHeight="6.0" prefWidth="108.0" style="-fx-background-color: #0269A4;" text="Polacz" textFill="WHITE" translateY="-54.0" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Button>
-                              <Label fx:id="connectionInformation" prefHeight="20.0" prefWidth="105.0" translateY="-25.0" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" onAction="#save" prefHeight="6.0" prefWidth="108.0" style="-fx-background-color: #0269A4;" text="Zapisz do pliku" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Button>
                            </children>
                         </GridPane>
                      </children></AnchorPane>
@@ -133,12 +112,7 @@
                                                 <Font size="21.0" />
                                              </font>
                                           </Label>
-                                          <Button fx:id="changeLoginButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doLoginTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Button>
-                                          <Button fx:id="deleteb" layoutX="511.0" layoutY="34.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Usun konto" textFill="#e4e4e4">
+                                          <Button fx:id="changeLoginButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
@@ -182,7 +156,7 @@
                                                       <Font size="21.0" />
                                                    </font>
                                                 </Label>
-                                                <Button fx:id="changePasswordButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doPasswordTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                                <Button fx:id="changePasswordButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
                                                    <font>
                                                       <Font name="System Bold" size="14.0" />
                                                    </font>
@@ -193,7 +167,7 @@
                                     </AnchorPane>
                                     <AnchorPane prefHeight="69.0" prefWidth="662.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <children>
-                                          <Button fx:id="changeNameButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doNameTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                          <Button fx:id="changeNameButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>
@@ -216,7 +190,7 @@
                                                 <Font size="21.0" />
                                              </font>
                                           </Label>
-                                          <Button fx:id="changeSurnameButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doSurnameTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
+                                          <Button fx:id="changeSurnameButton" layoutX="288.0" layoutY="35.0" mnemonicParsing="false" onAction="#doTransfer" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #0269A4;" text="Zmień" textFill="#e4e4e4">
                                              <font>
                                                 <Font name="System Bold" size="14.0" />
                                              </font>

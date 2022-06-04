@@ -6,6 +6,7 @@ module com.chatclient.client {
 
     requires retrofit2.converter.gson;
     requires retrofit2;
+    requires com.fasterxml.jackson.databind;
 
 
     opens com.chatclient.client to javafx.fxml;

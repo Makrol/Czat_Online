@@ -1,5 +1,6 @@
 package com.chatclient.client;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -47,22 +48,24 @@ public class LogInController{
 
     @FXML
     void cancelLogin(ActionEvent event) {
-
+        Platform.exit();
     }
 
     @FXML
-    void userLogin(ActionEvent event) throws IOException {
-
+    void userLogin(ActionEvent event) throws IOException,Throwable {
         ChatAppController.user = apiAccountController.login(login.getText(),passwordLogin.getText());
         if(ChatAppController.user!=null){
             ChatClient.changeScreen("chatApp.fxml", 924.0f,576.0f);
         }
 
-
     }
     @FXML
     void userRegister(ActionEvent event) throws IOException{
-       apiAccountController.register(name.getText(),surname.getText(),loginRegister.getText(),passwordRegister.getText());
+        apiAccountController.register(name.getText(),surname.getText(),loginRegister.getText(),passwordRegister.getText());
+        name.setText("");
+        surname.setText("");
+        loginRegister.setText("");
+        passwordRegister.setText("");
     }
 
 }

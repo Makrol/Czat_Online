@@ -1,12 +1,25 @@
 package com.chatclient.client;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Objects;
 
 public class Account {
+    @SerializedName("id")
+    @Expose
     public Long id;
+    @SerializedName("name")
+    @Expose
     public String name;
+    @SerializedName("surname")
+    @Expose
     public String surname;
+    @SerializedName("login")
+    @Expose
     public String login;
+    @SerializedName("password")
+    @Expose
     public String password;
 
 
